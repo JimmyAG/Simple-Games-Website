@@ -23,6 +23,7 @@ Requirements
 Clone the repo, then change into the directory where main.py exists and run the following commands to start the dev server
 
 ```bash
+pip3 install Flask
 flask --app main.py run
 ```
 
