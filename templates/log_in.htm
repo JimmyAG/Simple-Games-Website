@@ -1,0 +1,35 @@
+{% extends "layout.htm" %}
+
+{% block content %}
+<div class="container">
+    <div class="center">
+        <div id="log-in"> 
+            <form action="/log_in" method="POST">
+                <p style="font-size: xx-large;"> Log in to your account</p>
+                <div class="username">
+                    <p>Username</p>
+                    <input id="login_username" name="login_username" placeholder="Enter your username" ></input>
+                </div>
+                <div class="password">
+                    <p>Password</p>
+                    <input id="login_password" type="password" name="login_password" placeholder="Enter your password" ></input>
+                </div>
+                
+                <div>
+                    <input id="login_button" name ="login" type="submit" value="Log in">
+                </div>
+            </form>
+            <div class="not-user">
+                <a href="/sign_up" id = "sign">not a user?, sign up</a>
+            </div>
+        </div>
+                    
+        <div>
+            {% if message %}
+                <p id="wrong">{{message}}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

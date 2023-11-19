@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if stylesheet %}
+        <link rel="stylesheet" href={{stylesheet}}>
+    {% else %} 
+        <link rel="stylesheet" href="/static/style.css">
+    {% endif %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title %}
+        <title> {{ title }} </title>
+    {% else %}
+        <title>Simple Games</title>
+    {% endif %} 
+</head>
+<body>
+    <div class="header">
+        <div id="navbar">
+            <ul>
+                <li id="logo"><a href="/"><img class="img" src="static/logo.png" alt="site-logo (controller)"></a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/games"> Games</li></a></li>
+                <li><a href="/sign_up">Sign up</a></li>
+                <li><a href="/log_in">Log in</a></li>
+                <li><a href="/stats">Stats</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock content %}
+
+</body>
+</html>

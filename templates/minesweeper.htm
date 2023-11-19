@@ -1,0 +1,57 @@
+
+
+{% extends "layout.htm" %}
+
+{% block content %}
+    {% if session['logged_in'] %}
+        <div class="container">
+            <div class="center">
+                <p>
+                    Welcome 
+                </p>
+                <p>
+                    <p id="user">{{ current_user }}</p>
+                    
+                    <br>
+                    <br>
+                    This is minesweeper click on any button to start the game!
+                    
+                </p>
+                <div id="layer">
+                    <div id="grid">
+                    </div>
+                </div>
+                <div id = "result">
+
+                </div>
+                <div>
+                    <input id="beginner" type="button" value="Beginner">
+                    <input id="intermediate" type="button" value="Intermediate">
+                    <input id="expert" type="button" value="Expert">
+                </div>
+            </div>
+        </div>
+
+
+        <script src="/static/minesweeper/minesweeper.js"></script>
+
+    {% else %} 
+        <div class="container">
+            <div class="center">
+                <p>
+                    This is minesweeper 
+                </p>
+                <div id="grid">
+                </div>
+                <div>
+
+                    <input id="beginner" type="button" value="Beginner">
+                    <input id="intermediate" type="button" value="Intermediate">
+                    <input id="expert" type="button" value="Expert">
+                </div>
+            </div>
+        </div>
+        <script src="/static/minesweeper/minesweeper.js"></script>
+    {% endif %}
+
+{% endblock content %}

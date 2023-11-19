@@ -1,0 +1,71 @@
+{% extends "layout.htm" %}
+
+
+{% block content %}
+
+    {% if session['logged_in'] %}
+        <div class="container">
+            <div class="center">
+                <div class="profile">
+                    <div class="info">
+                        <img id="user-image" src="/static/stats/user.png" alt="User picture"/>
+                        <div>
+                            <p id = "user" style="font-weight: bolder; font-size: larger;">{{ current_user }}</p>
+                            <p>Age: </p>
+                            <p>Male/Female </p>
+                        </div>
+                        
+                    </div>
+                    <div class="stats">
+                        <p>Welcome, {{ current_user }}</p>
+
+                        <div id="record">
+                            <p>This is your stats page.</p>
+
+                            <br>
+                            <br>
+                            <input id="loadStorage" type="button" value="Load stats">
+                            
+                        </div>
+                        <div id="placeHolder">
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div >
+                    <a href="/log_out"><input id="log_out" type="button" value="Log out"> </a>
+                </div>
+               
+            </div>
+        </div>
+
+        <script src="/static/stats/stats.js"></script>
+    
+    {% else %} 
+        <div class="container">
+            <div class="center">
+                <div class="profile">
+
+                    <div class="stats">
+                        <p>Welcome</p>
+
+                        <div id="record">
+                            <p>This is your stats page.</p>
+
+                            <br>
+                            <br>
+                            <input id="loadStorage" type="button" value="Load stats">
+                            
+                            
+                        </div>
+                        <p id="placeHolder"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="/static/stats/stats.js"></script>
+    {% endif %}
+{% endblock content %}

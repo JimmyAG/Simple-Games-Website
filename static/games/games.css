@@ -1,0 +1,110 @@
+body {
+    background-color: #810707;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body p {
+    font-size: large;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.center {
+    text-align: center;
+    background-color: white;
+    text-justify: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 20px;
+    height: max-content; 
+}
+
+
+/* header and nav bar */
+#navbar {
+    width: 100%;
+}
+
+#logo {
+    
+    pointer-events: none;
+    margin-right: 20px;
+}
+.img {
+    height: 80px;   
+    width: 80px;    
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    display: flex;
+    font-size: large;
+    top: 0;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+
+  }
+  
+  li {
+
+
+    display: flex; 
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+  }
+  
+  li a {
+
+    color: white;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  li:hover {
+    background-color: #810707;
+  }
+
+  
+  /* pagespecific */
+
+#game {
+    display: flex;
+    flex-direction: row;
+}
+
+#games a {
+    text-decoration: none;
+}
+
+.minesweeper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.tic-tac-toe {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+.tic-tac-toe img {
+    height: 350px;
+}

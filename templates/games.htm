@@ -1,0 +1,29 @@
+{% extends "layout.htm" %}  
+
+
+{% block content %}
+    <div class="container">
+        <div class="center">
+            <p>
+                Currently there is only two games added to the website: Minesweeper and Tic Tac Toe.
+                You can play minesweeper in singleplayer mode, but for Tic Tac Toe it is only in multiplayer mode for the moment *
+            </p>
+
+            <div id="games" style="display: flex;">
+                <div class="minesweeper">
+                    <img src="/static/games/minesweeper-preview.png" alt="minesweeper-preview" >
+                    <a href="/minesweeper">Play Minesweeper</a>
+                </div>
+                <div class="tic-tac-toe">
+
+                    <img src="/static/games/tic-tac-toe-preview.png" alt="tic-tac-toe-preview" >
+                    <a href="/tic-tac-toe">Play Tic Tac Toe</a>
+                </div>
+            </div>
+            <br>
+            <p style="font-size: smaller;">
+                *I ran out of time!
+            </p>
+        </div>
+    </div>
+{% endblock content %}

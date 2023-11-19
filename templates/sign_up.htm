@@ -1,0 +1,28 @@
+{% extends "layout.htm" %}
+
+{% block content %}
+<div class="container">
+    <div class="center">
+        <div id="sign-up">
+            <form action="/sign_up" method="POST">
+                
+                <p style="font-size: xx-large;">Create a new account</p>
+                <div class="username">
+                    <p>Username</p>
+                    <input id="signup_username" name="signup_username" placeholder="Enter your username" ></input>
+                </div>
+                <div class="password">
+                    <p>Password:</p>
+                    <input id="signup_password" type="password" id="text" name="signup_password" placeholder="Enter your password" ></input> 
+                </div>
+                <div>
+                    <input id="signup_button" name ="add" type="submit" value="Sign Up">
+                </div>
+            </form>
+            <p class="user-found"></p>
+            <p>{{message}}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
